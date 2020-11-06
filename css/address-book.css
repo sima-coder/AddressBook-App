@@ -12,10 +12,8 @@
     color : #fff;
 }
 
-.project-header {
-    text-align: center;
-    color : #fff;
-    margin: 35px 0 0;
+.project-header h1{
+    margin: 35px 0 10px;
 }
 
 .project-section {
