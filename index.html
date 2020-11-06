@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <title>Address Book</title>
+      <meta name="description" content="Gestion d'un carnet d'adresses exploitant le stockage local du navigateur">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
+      <link href="css/lib/normalize.css" rel="stylesheet">
+      <link href="css/lib/all.min.css" rel="stylesheet">
+      <link href="css/lib/layout.css" rel="stylesheet">
+      <link href="css/address-book.css" rel="stylesheet">
+      <link rel="shortcut icon" href="css/lib/img/icon.jpg" type="image/jpg">
+
+      <!-- Librairies de fonctions JavaScript -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/utilities.js"></script>
+      <script src="js/address-book.js"></script>
+      <script src="js/events.js"></script>
+  </head>
+  <body>
+    <header class="banner">
+      <a class="banner-link" href="">
+        <strong class="banner-title">Address Book</strong>
+      </a>
+    </header>
+
+    <main class="project container">
+
+      <header class="project-header">
+        <h1>Manage your contact list</h1>
+     
+        <nav>
+          <button id="add-contact" class="btn btn-lg" title="Add a contact">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+          </button>
+          <button id="clear-address-book" class="btn btn-lg" title="Clear address book">
+            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+          </button>
+        </nav>
+      </header>
+
+      <div class="project-section">
+
+        <div class="bg-dark">
+          <h2>Saved contacts</h2>
+          <!-- Affichage de la liste des contacts -->
+          <div id="address-book" class="address-book">
+            <p class="bg-default">No contact saved</p>
+          </div>
+        </div>
+
+        <div id="contact-details" class="is-hidden bg-dark">
+          <h2>Contact detail</h2>
+          <dl>
+            <dt></dt>
+            <dd></dd>
+          </dl>
+          <a class="btn" href="#contact-form">Edit this contact
+          </a>
+       </div>
+
+        <form id="contact-form" class="is-hidden bg-dark">
+          <fieldset>
+            <legend>Entering / modifying a contact</legend>
+            <p class="field-error is-hidden"></p>
+            <ul class="field-list">
+              <li>
+                  <label for="title">Civility</label>
+                  <select id="title" name="title">
+                      <option value="1">Mrs</option>
+                      <option value="2">Miss</option>
+                      <option value="3">Mr.</option>
+                  </select>
+              </li>
+              <li>
+                  <label for="firstName">First name</label>
+                  <input id="firstName" type="text" name="firstName">
+              </li>
+              <li>
+                  <label for="lastName">Last name</label>
+                  <input id="lastName" type="text" name="lastName">
+              </li>
+              <li>
+                  <label for="phone">Phone</label>
+                  <input id="phone" type="text" name="phone" maxlength="10">
+              </li>
+              
+              <p class="text-right">
+                <button class="btn" id="save-contact">Save</button>
+                <input type="reset" class="btn" value="Reset">
+              </p>
+            </ul>
+          </fieldset>
+        </form>
+
+      </div>
+    </main>
+
+    <!-- Code principal JavaScript -->
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
